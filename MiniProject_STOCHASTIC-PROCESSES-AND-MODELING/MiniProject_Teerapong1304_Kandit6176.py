@@ -1,3 +1,7 @@
+# Members:
+# Teerapong Kunasit
+# Kandit Tanthanathewin
+
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import * #binom,chi2,t
@@ -43,7 +47,7 @@ plt.ylabel('Probability')
 plt.grid(True)
 # plt.show()
 
-#2.2_______________________________________________________
+#2.2 ---------------------------------------------------------------------------------------------------
 print("#2 การจำลองแบบ --------------------------------------------------------------------------------")
 print("p = 0.31 + x2/1000 = 0.31 + 40/1000 = ", p)                           
 print("X = ",X)
@@ -52,16 +56,20 @@ print("e = ",e, "with number of bins = ", len(e)-1)
 print("K = ",k)
 print("PMF = ", PMF)
 plt.show()
+# --------------------------------------------------------------------------------------------------------
 
+
+#3.5 ----------------------------------------------------------------------------------------------------
 print("#3.5 Statistic Z --------------------------------------------------------------------------------")
-#3.5_______________________________________________________
 H = np.bincount(X, minlength=len(PMF))      # calculate the histogram
 print(f"H = {H}")                           # print the histogram
 Z = np.sum((H - n * PMF) ** 2 / (n * PMF))  # calculate the statistics
 print(f"Statistics Z = {Z:.5f}")            # print the statistics
+# -------------------------------------------------------------------------------------------------------
 
+
+#3.6 --------------------------------------------------------------------------------------------------------
 print("#3.6 degrees of the freedom threshold zα -----------------------------------------------------------")
-#3.6_______________________________________________________
 # Degrees of freedom = Number of bins - 1
 # m = len(e) - 1 = N
 m = len(e) - 1                          # number of bins
@@ -70,18 +78,24 @@ dof = ((m) - 1 - r)                     # calculate the degrees of freedom
 alpha = 0.05                            # significance level
 threshold = chi2.ppf(1 - alpha, dof)    # calculate the threshold
 print(f"Degrees of freedom: {dof}, Chi-squared threshold: {threshold:.5f}")
+# -----------------------------------------------------------------------------------------------------------
 
-# compare the statistics with the threshold
+
+# compare the statistics with the threshold ----------------------------------------------------------------
 if Z < threshold:   
     print(f"While {Z:.5f} < {threshold:.5f}(Z < threshold), the candidate PMF is a good fit to the data.")
 else:
     print(f"While {Z:.5f} > {threshold:.5f}(Z > threshold), the candidate PMF is not a good fit to the data.")
 
 print("#4 Sn, yα and Confidence Interva ---------------------------------------------------------------")
-#4.7-4.8___________________________________________________
-# Calculate standard deviation
+# -----------------------------------------------------------------------------------------------------------
+
+
+# Calculate standard deviation ---------------------------------------------------------------------------
 Sn = np.std(X, ddof=1)
-# Calculate confidence interval for the mean
+# --------------------------------------------------------------------------------------------------------
+
+# Calculate confidence interval for the mean -------------------------------------------------------------
 dof_new = n-1                                                   # degrees of freedom
 y_alpha_over_2 = t.ppf(1 - alpha / 2, dof_new)                  # t-distribution value
 mean_lower_bound = Mn - (y_alpha_over_2 * (Sn / np.sqrt(N)))    # lower bound
@@ -91,4 +105,4 @@ print(f"y_alpha_over_2 = {y_alpha_over_2:.5f}")
 print(f"Sn = {Sn:.5f}")
 print(f"Confidence Interval: [{mean_lower_bound:.5f}, {mean_upper_bound:.5f}]")
 
-
+# ----------------------------------------------------------------------------------------------------------
