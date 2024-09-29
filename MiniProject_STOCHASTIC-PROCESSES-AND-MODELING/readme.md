@@ -1,4 +1,4 @@
-#MiniProject_STOCHASTIC-PROCESSES-AND-MODELING
+# MiniProject_STOCHASTIC-PROCESSES-AND-MODELING
 This is ....
 
 ## member 
