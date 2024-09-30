@@ -71,7 +71,7 @@ print(f"Statistics Z = {Z:.5f}")            # print the statistics
 #3.6 --------------------------------------------------------------------------------------------------------
 print("#3.6 degrees of the freedom threshold zα -----------------------------------------------------------")
 # Degrees of freedom = Number of bins - 1
-# m = len(e) - 1 = N
+# m = len(e) - 1 = Number of bins
 m = len(e) - 1                          # number of bins
 r = 1                                   # number of estimated parameters
 dof = ((m) - 1 - r)                     # calculate the degrees of freedom
@@ -98,8 +98,8 @@ Sn = np.std(X, ddof=1)
 # Calculate confidence interval for the mean -------------------------------------------------------------
 dof_new = n-1                                                   # degrees of freedom
 y_alpha_over_2 = t.ppf(1 - alpha / 2, dof_new)                  # t-distribution value
-mean_lower_bound = Mn - (y_alpha_over_2 * (Sn / np.sqrt(N)))    # lower bound
-mean_upper_bound = Mn + (y_alpha_over_2 * (Sn / np.sqrt(N)))    # upper bound
+mean_lower_bound = Mn - (y_alpha_over_2 * (Sn / np.sqrt(n)))    # lower bound
+mean_upper_bound = Mn + (y_alpha_over_2 * (Sn / np.sqrt(n)))    # upper bound
 
 print(f"y_alpha_over_2 = {y_alpha_over_2:.5f}")
 print(f"Sn = {Sn:.5f}")
