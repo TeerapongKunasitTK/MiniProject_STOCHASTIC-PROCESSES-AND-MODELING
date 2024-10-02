@@ -3,7 +3,7 @@ This is mini project ........ for STOCHASTIC PROCESSES AND MODELING
 
 ## Member 
 - [Teerapong Kunasit](https://github.com/TeerapongKunasitTK)
-- [Kandit Tanthanathewin]()
+- [Kandit Tanthanathewin](https://github.com/KanditT)
   
 ## Python library
 - Numpy
