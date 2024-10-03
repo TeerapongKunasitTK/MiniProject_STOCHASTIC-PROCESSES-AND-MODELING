@@ -1,5 +1,5 @@
 # MiniProject_STOCHASTIC-PROCESSES-AND-MODELING
-This is mini project ........ for STOCHASTIC PROCESSES AND MODELING
+This is mini project  for STOCHASTIC PROCESSES AND MODELING
 
 ## Member 
 - [Teerapong Kunasit](https://github.com/TeerapongKunasitTK)
