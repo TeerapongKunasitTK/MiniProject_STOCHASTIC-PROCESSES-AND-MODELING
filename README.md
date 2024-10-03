@@ -6,7 +6,7 @@
 
 This repository contains my learning resources on Stochastic Processes and Modeling.
 
-## Work
+## Learning
 ###  [Mini projct Stochastic Processes and Modeling ](https://github.com/TeerapongKunasitTK/STOCHASTIC-PROCESSES-AND-MODELING/tree/main/MiniProject_STOCHASTIC-PROCESSES-AND-MODELING)
 
 
