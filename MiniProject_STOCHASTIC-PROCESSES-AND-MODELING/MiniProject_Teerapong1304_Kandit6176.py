@@ -1,8 +1,8 @@
 # Members:
-# Teerapong Kunasit
-# Kandit Tanthanathewin
+# Teerapong Kunasit 653040130-4 No. 28
+# Kandit Tanthanathewin 653040617-6 No. 77
 
-import numpy as np
+import numpy as np 
 import matplotlib.pyplot as plt
 from scipy.stats import * #binom,chi2,t
 
